@@ -1,0 +1,198 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin_Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            text-align: center;
+        }
+        .auto-style2 {
+            width: 100%;
+        }
+        .auto-style18 {
+            background-color: #0066CC;
+        }
+        .auto-style19 {
+            font-size: medium;
+            width: 500px;
+            height: 62px;
+        }
+        .auto-style21 {
+            font-size: large;
+        }
+        .auto-style22 {
+            width: 100%;
+            margin-right: 19px;
+        }
+        .auto-style23 {
+            text-align: left;
+        }
+        .auto-style25 {
+            width: 120%;
+            margin-right: 0px;
+        }
+        .auto-style28 {
+            width: 164px;
+        }
+        .auto-style30 {
+            font-size: medium;
+        }
+        .auto-style32 {
+            text-align: justify;
+            width: 742px;
+        }
+        .auto-style34 {
+            width: 687px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="auto-style1">
+        <table class="auto-style2" style="border:thin solid #C0C0C0; font-family: 'Microsoft YaHei'">
+            <tr>
+                <td class="auto-style30">
+                    <table class="auto-style2">
+                        <tr>
+                            <td class="auto-style19" style="font-weight:700; text-align:left"><strong>&nbsp;<asp:Image ID="Image1" runat="server" BorderStyle="None" Height="73px" ImageUrl="~/Images/i191.png" Width="84px" CssClass="auto-style30" ImageAlign="Middle" />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Child Vaccination &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></td>
+                            <td class="">
+                                <table style="border:thin solid #C0C0C0;border-radius:10px; width: 500px;">
+                                    <tr>
+                                        <td style="text-align:center">
+                                <asp:TextBox ID="TextBox1" runat="server" Height="40px" Width="350px" BorderStyle="None" placeholder="Enter City/Hospital/Vaccine" style="text-align:center" CssClass="auto-style30"></asp:TextBox>
+                                        </td>
+                                        <td>
+                                <asp:Image ID="Image4" runat="server" Height="45px" ImageUrl="~/Images/search1.png" BorderColor="Black" BorderStyle="None" Width="45px" CssClass="auto-style30" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            </td>
+            </tr>
+            </table>
+        </td>
+            </tr>
+                <td>
+                    <asp:Menu ID="Menu1" runat="server" Height="35px"  Orientation="Horizontal" RenderingMode="Table" StaticSubMenuIndent="16px" Width="100%" CssClass="auto-style18" ForeColor="White">
+                        <DynamicMenuItemStyle BackColor="#0066CC" BorderStyle="None" ForeColor="White" />
+                        <Items>
+                            <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Admin/Home.aspx"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/Addcity.aspx" Text="Add City" Value="Add child"></asp:MenuItem>
+                            <asp:MenuItem Text="Manage Hospital" Value="Manage Hospital" NavigateUrl="~/Admin/managehospital.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Manage Parent" Value="Manage Parent" NavigateUrl="~/Admin/manageparent.aspx"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin/viewchildren.aspx" Text="View Child" Value="view Child"></asp:MenuItem>
+                            <asp:MenuItem Text="View Enquiry" Value="View Enquiry" NavigateUrl="~/Admin/view enquiry.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="View Feedback" Value="View Feedback" NavigateUrl="~/Admin/view feedback.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Manage Admin" Value="Manage Admin" NavigateUrl="~/Admin/manage admin.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Report" Value="Report">
+                                <asp:MenuItem NavigateUrl="~/Report/Addcity.aspx" Text="Addcity" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Report/Child_Registration.aspx" Text="Child_Registration" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Report/Enquiry.aspx" Text="Enquiry" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Report/Feedback.aspx" Text="Feedback" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Report/Hospital_Registration.aspx" Text="Hospital_Registration" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Report/Notification.aspx" Text="Notification" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Report/Parent_Registration.aspx" Text="Parent_Registration" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Report/prescription.aspx" Text="Prescription" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Report/vaccine_Appointment.aspx" Text="vaccine_Appointment" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Report/vaccine1.aspx" Text="Vaccine" Value="New Item"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Report/ParameterizedReport.aspx" Text="Parameterized" Value="New Item"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Logout" Value="Logout" NavigateUrl="~/User/Home.aspx"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                 <td class="auto-style30" style="background-color: #3C87C8;">
+                    <table align="center"  class="auto-style2" cellpadding="20" style="background-color:#669999; ">
+                        <tr>
+                            <td class="auto-style32" style="background-color: #3C87C8; color: #FFFFFF;vertical-align:top; "><strong><span class="auto-style21">Child Vaccination Website:</span></strong><hr class="auto-style34" />
+                                <div class="auto-style36">
+                                <br class="auto-style30" />
+                               
+                                <span class="auto-style30">We are committed to safeguarding children&#39;s health through timely and reliable<br>
+                                     vaccination services. Our mission is to provide accessible, accurate, and up-to-date<br />
+                                     immunization support to parents and caregivers. Backed by certified healthcare <br />
+                                    professionals and government guidelines, we ensure every child gets the protection <br />
+                                    they deserve.</span></div>
+                            </td><td style="background-color: #3C87C8;vertical-align:top;" class="auto-style28">
+                            
+                                <table allign="center" cellpadding="5" cellspacing="1" class="auto-style25">
+                                    <tr>
+                                        <td class="auto-style21" style="color: #FFFFFF" ><strong><span class="auto-style30">PROGRAMS:</span></strong><hr />
+                                       
+                                    </tr>
+                                    <tr>
+                                        <td class="auto-style23">
+                                            <asp:HyperLink ID="HyperLink12" runat="server" NavigateUrl="~/User/Home.aspx" Style="text-decoration:none;" ForeColor="White" CssClass="auto-style30">Home</asp:HyperLink>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="auto-style23">
+                                            <asp:HyperLink ID="HyperLink13" runat="server" Style="text-decoration:none;" ForeColor="White" CssClass="auto-style30">Manage Hospital</asp:HyperLink>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="auto-style23">
+                                            <asp:HyperLink ID="HyperLink14" runat="server" NavigateUrl="~/Admin/manage admin.aspx" Style="text-decoration:none;" ForeColor="White" CssClass="auto-style30">Manage Admin</asp:HyperLink>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="auto-style23">
+                                            <asp:HyperLink ID="HyperLink15" runat="server" Style="text-decoration:none;" ForeColor="White" CssClass="auto-style30">Manage parent</asp:HyperLink>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td style="background-color: #3C87C8;vertical-align:top;"  >
+                                <table class="auto-style22" cellpadding="5" cellspacing="1">
+                                    <tr>
+                                        <td class="auto-style21"><strong><span style="color: #FFFFFF">Quick Links:</span></strong><hr />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="auto-style23">
+                                            <asp:HyperLink ID="HyperLink16" runat="server" Style="text-decoration:none;" ForeColor="White" CssClass="auto-style30">Report</asp:HyperLink>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="auto-style23" >
+                                            <asp:HyperLink ID="HyperLink17" runat="server" Style="text-decoration:none;" ForeColor="White" CssClass="auto-style30">View Enquiry</asp:HyperLink>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    <td class="auto-style23" >
+                                            <asp:HyperLink ID="HyperLink18" runat="server" Style="text-decoration:none;" ForeColor="White" CssClass="auto-style30">View Feedback</asp:HyperLink>
+                                </td>
+                                        </tr>
+                                    <tr>
+                                    <td class="auto-style23" >
+                                            <asp:HyperLink ID="HyperLink19" runat="server" Style="text-decoration:none;" ForeColor="White" CssClass="auto-style30">View parent</asp:HyperLink>
+                                </td>
+                                        
+                                        </tr>
+                                        </table>
+
+                            </td>
+                            <td style="background-color: #3C87C8;vertical-align:top;"  >
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.377676508856!2d74.47823749999999!3d16.707997000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc11ded0475eadb%3A0x79f3c5079c954ace!2sSharad%20Institute%20of%20Technology%20College%20of%20Engineering%2C%20Ichalkaranji%20(Kolhapur)!5e0!3m2!1sen!2sin!4v1751346493789!5m2!1sen!2sin" width="400" height="200" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>&nbsp;</td>
+                        </tr>
+                    </table>
+                    </td></tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
